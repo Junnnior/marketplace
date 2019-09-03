@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const StoreSchema = new Schema({
+const VendorSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -22,7 +22,7 @@ const StoreSchema = new Schema({
 
     },
 }, {
-    timesTamps: true,
+    timestamps: true,
 });
 
-module.exports = model('Store', StoreSchema);
+module.exports = model('Vendor', VendorSchema);
