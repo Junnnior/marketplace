@@ -1,6 +1,7 @@
 const express = require('express');
 const VendorController = require('./controllers/VendorController');
 const UserController = require('./controllers/UserController');
+const ProdController = require('./controllers/ProductController');
 
 const routes = express.Router();
 
@@ -14,7 +15,7 @@ routes.get('/', (req, res) => {
 // get all vendors
 routes.get('/vendors', VendorController.allUsers);
 
-// get all vendors
+// get vendors by cep
 routes.get('/vendors/:cep', VendorController.vendorByCity);
 
 // router creating new vendor
@@ -30,7 +31,10 @@ routes.post('/newUser', UserController.store);
 /* PRODUCT ROUTES ----------------------------------------- */
 
 // create new product
-routes.post('/newProducty/:idVendor', );
+routes.post('/newProducty/:vendorId', ProdController.create);
+
+// get all products
+routes.get('/products', ProdController.allProducts);
 
 
 module.exports = routes;
