@@ -15,6 +15,26 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
+
+    // mult address list
+    address: [{
+        local: {
+            type: String,
+        },
+        street: {
+            type: String,
+        },
+        city: {
+            type: String,
+        },
+        state: {
+            type: String,
+        },
+        cep: {
+            type: String
+        }
+    }],
+
 }, {
     timestamps: true,
 });
