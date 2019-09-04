@@ -6,6 +6,6 @@ const routes = express.Router();
 // router creating new user
 routes.post('/newUser', UserController.store);
 
-routes.post('/newAddrressUser/:idUser', UserController.addAddress);
+routes.post('/newAddrressUser/:idUser', UserController.addNewAddress);
 
 module.exports = routes;

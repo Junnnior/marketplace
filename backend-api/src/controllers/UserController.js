@@ -23,7 +23,7 @@ module.exports = {
         return res.json(newUser);
     },
 
-    async addAddress(req, res) {
+    async addNewAddress(req, res) {
 
         const { idUser } = req.params;
         const { newAddress } = req.body;
