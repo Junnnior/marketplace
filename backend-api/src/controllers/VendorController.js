@@ -7,6 +7,7 @@ module.exports = {
 
         // get request
         const { name, address } = req.body;
+        const { idUser } = req.params;
 
         // get vendor exist
         const vendorExists = await Vendor.findOne({ name })
@@ -16,6 +17,7 @@ module.exports = {
 
         // create new vendor
         const newVendor = await Vendor.create({
+            idUser,
             name,
             address,
         });
@@ -39,6 +41,7 @@ module.exports = {
     // get all vendors by cep
     async vendorByCity(req, res) {
 
+        // get params in url
         const { cep } = req.params;
 
         const vendors = await Vendor.find({
