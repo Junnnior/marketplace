@@ -13,8 +13,6 @@ const VendorSchema = new Schema({
     idsProducts: [],
 
     address: {
-        // type: Object,
-        // required: true,
         street: {
             type: String,
         },

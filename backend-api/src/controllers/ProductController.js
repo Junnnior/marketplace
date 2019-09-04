@@ -19,17 +19,15 @@ module.exports = {
         // push idProduct in vendor
         const vendor = await Vendor.findById(vendorId);
 
-        // add idPoroduct in list vendor
+        // add id poroduct in list vendor
         vendor.idsProducts.push(newProduct._id);
         vendor.save()
 
         return res.json(newProduct);
-
     },
 
     // get all vendors
     async allProducts(req, res) {
-
         const products = await Product.find({});
 
         if (products) {
