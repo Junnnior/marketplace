@@ -15,14 +15,14 @@ const VendorSchema = new Schema({
     address: {
         // type: Object,
         // required: true,
-        rua: {
+        street: {
             type: String,
         },
-        cidade: {
+        city: {
             type: String,
         },
 
-        estado: {
+        state: {
             type: String,
         },
 
