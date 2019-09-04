@@ -6,9 +6,9 @@ module.exports = {
         // get request
         const { name, address } = req.body;
 
-        // get user exist
-        const userExists = await Vendor.findOne({ name })
-        if (userExists) {
+        // get vendor exist
+        const vendorExists = await Vendor.findOne({ name })
+        if (vendorExists) {
             return res.json(userExists);
         }
 
