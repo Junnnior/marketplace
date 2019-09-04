@@ -10,8 +10,14 @@ routes.get('/', (req, res) => {
     return res.send("Ola");
 })
 
+// get all vendors
+routes.get('/vendors', VendorController.allUsers);
+
+// get all vendors
+routes.get('/vendors/:cep', VendorController.vendorByCity);
+
 // router creating new vendor
-routes.post('/vendors', VendorController.store);
+routes.post('/newVendor', VendorController.store);
 
 // router creating new user
 routes.post('/newUser', UserController.store);

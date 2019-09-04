@@ -18,6 +18,10 @@ const VendorSchema = new Schema({
 
         estado: {
             type: String,
+        },
+
+        cep: {
+            type: String
         }
 
     },
