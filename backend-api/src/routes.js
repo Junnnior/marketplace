@@ -17,7 +17,7 @@ routes.get('/vendors', VendorController.allUsers);
 routes.get('/vendors/:cep', VendorController.vendorByCity);
 
 // router creating new vendor
-routes.post('/newVendor', VendorController.store);
+routes.post('/newVendor/:idUser', VendorController.store);
 
 // router creating new user
 routes.post('/newUser', UserController.store);
