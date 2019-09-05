@@ -23,5 +23,15 @@ export class VendorService {
         return res;
       });
   }
+  
+  // busca produto pelo ID
+  public getProdById(id): Promise<Vendor[]> {
+    // Efetuar requisição http
+    return this.http.get<Vendor[]>(`${this.rootURL}/vendors/${id}`)
+      .toPromise()
+      .then((res) => {
+        return res;
+      });
+  }
 
 }

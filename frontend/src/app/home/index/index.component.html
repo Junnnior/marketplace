@@ -26,7 +26,7 @@
         <div class="carousel-item active">
             <div class="list-vendors row">
                 <div class="vendor col-ms-1 " *ngFor="let vendor of vendors  | slice:0:12">
-                    <div class="vendor-body ">
+                    <div class="vendor-body" [routerLink]="['/vendor/', vendor._id]">
                         <div class="vendor-image">
 
                         </div>
@@ -58,7 +58,7 @@
 
             <div class="list-vendors row">
                 <div class="vendor col-ms-1 " *ngFor="let vendor of vendors  | slice:24:48">
-                    <div class="vendor-body ">
+                    <div class="vendor-body">
                         <div class="vendor-image">
 
                         </div>

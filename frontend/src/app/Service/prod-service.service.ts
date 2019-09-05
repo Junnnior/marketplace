@@ -14,7 +14,6 @@ export class ProdServiceService {
 
   readonly rootURL = "http://localhost:3333";
 
-
   // busca todos os produtos
   public getAllProd(): Promise<Product[]> {
     // Efetuar requisição http
@@ -24,5 +23,6 @@ export class ProdServiceService {
         return res;
       });
   }
+
 }
 

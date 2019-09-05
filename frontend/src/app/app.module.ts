@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Shered/header/header.component';
 import { IndexComponent } from './home/index/index.component';
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { VendorComponent } from './Shered/vendor/vendor.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    IndexComponent
+    IndexComponent,
+    VendorComponent
   ],
   imports: [
     BrowserModule,
