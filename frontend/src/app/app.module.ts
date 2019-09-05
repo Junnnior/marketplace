@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Shered/header/header.component';
 import { IndexComponent } from './home/index/index.component';
 
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -15,9 +17,11 @@ import { IndexComponent } from './home/index/index.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule, 
+  
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

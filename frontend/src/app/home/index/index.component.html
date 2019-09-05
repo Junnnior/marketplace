@@ -1,73 +1,82 @@
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<!-- Lista de produtos -->
+<div class="list-products row">
+    <div class="product" *ngFor="let item of products  | slice:0:6">
+        <div class="product-body">
+            <div class="product-image">
+                <img src="https://static.saopaulomania.com.br/produtos/camisa-sao-paulo-treino-2019-adidas-masculina/08/COL-4530-008/COL-4530-008_zoom1.jpg" alt="">
+
+            </div>
+            <div class="product-footer">
+                <div class="product-price">R$ {{item.price}}</div>
+                <div class="name">{{item.name}}</div>
+            </div>
+
+            <!-- <div class="btn-comprar">
+                        <button class="btn btn-primary">Comprar</button>
+                    </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+<div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
+
         <div class="carousel-item active">
-            <div class="list-products">
-                <div class="product" *ngFor="let item of product  | slice:0:5">
-                    <div class="product-body">
-                        <div class="product-image">
-                            <img width="200" src="https://static.saopaulomania.com.br/produtos/camisa-sao-paulo-treino-2019-adidas-masculina/08/COL-4530-008/COL-4530-008_zoom1.jpg" alt="">
+            <div class="list-vendors row">
+                <div class="vendor col-ms-1 " *ngFor="let vendor of vendors  | slice:0:12">
+                    <div class="vendor-body ">
+                        <div class="vendor-image">
 
                         </div>
-                        <div class="product-footer">
-                            <div class="product-price">R$ {{item.price}}</div>
-                            <div class="name">{{item.name}}</div>
+                        <div class="vendor-footer">
+                            <div class="vendor-name">{{vendor.name}}</div>
                         </div>
-
-                        <!-- <div class="btn-comprar">
-                                <button class="btn btn-primary">Comprar</button>
-                            </div> -->
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="carousel-item" *ngIf="product.length > 5">
-            <div class="list-products">
-                <div class="product" *ngFor="let item of product | slice:5:10">
-                    <div class="product-body">
-                        <div class="product-image">
-                            <img width="200" src="https://static.saopaulomania.com.br/produtos/camisa-sao-paulo-treino-2019-adidas-masculina/08/COL-4530-008/COL-4530-008_zoom1.jpg" alt="">
+        <div class="carousel-item" *ngIf="vendors?.length > 12">
+
+            <div class="list-vendors row">
+                <div class="vendor col-ms-1 " *ngFor="let vendor of vendors  | slice:12:24">
+                    <div class="vendor-body ">
+                        <div class="vendor-image">
 
                         </div>
-                        <div class="product-footer">
-                            <div class="product-price">R$ {{item.price}}</div>
-                            <div class="name">{{item.name}}</div>
+                        <div class="vendor-footer">
+                            <div class="vendor-name">{{vendor.name}}</div>
                         </div>
-
-                        <!-- <div class="btn-comprar">
-                                <button class="btn btn-primary">Comprar</button>
-                            </div> -->
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="carousel-item" *ngIf="product.length > 10">
-            <div class="list-products">
-                <div class="product" *ngFor="let item of product | slice:10:15">
-                    <div class="product-body">
-                        <div class="product-image">
-                            <img width="200" src="https://static.saopaulomania.com.br/produtos/camisa-sao-paulo-treino-2019-adidas-masculina/08/COL-4530-008/COL-4530-008_zoom1.jpg" alt="">
+        <div class="carousel-item" *ngIf="vendors?.length > 24">
+
+            <div class="list-vendors row">
+                <div class="vendor col-ms-1 " *ngFor="let vendor of vendors  | slice:24:48">
+                    <div class="vendor-body ">
+                        <div class="vendor-image">
 
                         </div>
-                        <div class="product-footer">
-                            <div class="product-price">R$ {{item.price}}</div>
-                            <div class="name">{{item.name}}</div>
+                        <div class="vendor-footer">
+                            <div class="vendor-name">{{vendor.name}}</div>
                         </div>
-
-                        <!-- <div class="btn-comprar">
-                                <button class="btn btn-primary">Comprar</button>
-                            </div> -->
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      &#60;
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span aria-hidden="true">&#9668;</span>
+        <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      &#62; 
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span aria-hidden="true">&#9658;</span>
+        <span class="sr-only">Next</span>
     </a>
 </div>
