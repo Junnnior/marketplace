@@ -58,4 +58,20 @@ module.exports = {
     },
 
 
+    // get all vendors by ID
+    async vendorById(req, res) {
+
+        // get params in url
+        const { _id } = req.params;
+
+        const vendors = await Vendor.findById({ _id });
+
+        if (vendors) {
+            return res.json(vendors);
+        }
+        return res.json(200);
+    },
+
+
+
 }
