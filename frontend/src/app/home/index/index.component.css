@@ -21,6 +21,12 @@
     width: 90%;
 }
 
+.vendor:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: all 0.2s;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
     color: #000 !important;
