@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { ProdServiceService } from 'src/app/Service/prod-service.service';
 import { VendorService } from 'src/app/Service/vendor.service';
 
 import { Product } from 'src/app/Models/product.model';
@@ -16,16 +15,15 @@ import { Vendor } from 'src/app/Models/vendor.model';
 export class VendorComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
-    private prodService: ProdServiceService,
     private vendorService: VendorService) { }
 
   vendorId: number;
   products: Product[];
   vendor: Vendor[]
 
-  ngOnInit() {
-    this.getIdInParams();
-    this.getVendorById();
+  async ngOnInit() {
+    await this.getIdInParams();
+    await this.getVendorById();
 
   }
 
@@ -37,7 +35,7 @@ export class VendorComponent implements OnInit {
   }
 
   getVendorById(){
-    this.vendorService.getProdById(this.vendorId)
+    this.vendorService.getVendorById(this.vendorId)
     .then((resVendors: Array<Vendor>) => {
       this.vendor = resVendors;
       console.log(this.vendor)

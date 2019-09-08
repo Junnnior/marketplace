@@ -7,7 +7,9 @@ import { HeaderComponent } from './Shered/header/header.component';
 import { IndexComponent } from './home/index/index.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { VendorComponent } from './Shered/vendor/vendor.component'
+import { VendorComponent } from './Shered/vendor/vendor.component';
+import { ListProductsComponent } from './Shered/list-products/list-products.component';
+import { ProductsByIdComponent } from './Shered/products-by-id/products-by-id.component'
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { VendorComponent } from './Shered/vendor/vendor.component'
     AppComponent,
     HeaderComponent,
     IndexComponent,
-    VendorComponent
+    VendorComponent,
+    ListProductsComponent,
+    ProductsByIdComponent
   ],
   imports: [
     BrowserModule,

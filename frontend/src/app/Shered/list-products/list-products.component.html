@@ -1,0 +1,19 @@
+<!-- Lista de produtos -->
+<div class="list-products row">
+    <div class="product" *ngFor="let item of products  | slice:0:6">
+        <div class="product-body">
+            <div class="product-image">
+                <img src="https://static.saopaulomania.com.br/produtos/camisa-sao-paulo-treino-2019-adidas-masculina/08/COL-4530-008/COL-4530-008_zoom1.jpg" alt="">
+
+            </div>
+            <div class="product-footer">
+                <div class="product-price">R$ {{item.price}}</div>
+                <div class="name">{{item.name}}</div>
+            </div>
+
+            <!-- <div class="btn-comprar">
+                        <button class="btn btn-primary">Comprar</button>
+                    </div> -->
+        </div>
+    </div>
+</div>

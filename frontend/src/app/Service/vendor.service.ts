@@ -24,8 +24,8 @@ export class VendorService {
       });
   }
   
-  // busca produto pelo ID
-  public getProdById(id): Promise<Vendor[]> {
+  // busca vendedor pelo ID
+  public getVendorById(id): Promise<Vendor[]> {
     // Efetuar requisição http
     return this.http.get<Vendor[]>(`${this.rootURL}/vendors/${id}`)
       .toPromise()
