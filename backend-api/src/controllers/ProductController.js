@@ -26,9 +26,25 @@ module.exports = {
         return res.json(newProduct);
     },
 
-    // get all vendors
+    // get all products
     async allProducts(req, res) {
         const products = await Product.find({});
+
+        if (products) {
+            return res.json(products);
+        }
+
+        return res.json(200);
+    },
+
+    // get all products
+    async productById(req, res) {
+        const { vendorId } = req.params;
+        const products = await Product.find({
+            $and: [
+                { "vendorId": vendorId }
+            ],
+        });
 
         if (products) {
             return res.json(products);

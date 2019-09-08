@@ -24,5 +24,15 @@ export class ProdServiceService {
       });
   }
 
+  // busca produto pelo ID
+  public getProdById(id): Promise<Product[]> {
+    // Efetuar requisição http
+    return this.http.get<Product[]>(`${this.rootURL}/products/${id}`)
+      .toPromise()
+      .then((res) => {
+        return res;
+      });
+  }
+
 }
 

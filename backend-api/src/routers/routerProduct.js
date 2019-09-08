@@ -9,5 +9,8 @@ routes.post('/newProducty/:vendorId', ProdController.create);
 // get all products
 routes.get('/products', ProdController.allProducts);
 
+// get products by Id
+routes.get('/products/:vendorId', ProdController.productById);
+
 
 module.exports = routes;
