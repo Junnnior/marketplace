@@ -19,29 +19,33 @@ export class IndexComponent implements OnInit {
   products: Product[];
   vendors: Vendor[];
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.getAllPorducts();
+    await this.getAllVendors();
+       
+  }
 
-    // get all products
+  // get all products
+  getAllPorducts(){
     this.prodService.getAllProd()
       .then((resProd: Array<Product>) => {
         this.products = resProd;
         console.log(this.products)
-      })
-      .catch((param: any) => {
-        console.log("Erro de Conexão")
-      });
+    })
+    .catch((param: any) => {
+      console.log("Erro de Conexão")
+     });
+  }
 
-    // get all vendors
+  // get all vendors
+  getAllVendors(){
     this.vendorService.getAllVendors()
       .then((resVendors: Array<Vendor>) => {
         this.vendors = resVendors;
         console.log(this.vendors)
-      })
-      .catch((param: any) => {
-        console.log("Erro de Conexão")
-      });
+    })
+    .catch((param: any) => {
+      console.log("Erro de Conexão")
+    });
   }
-
-
-
 }

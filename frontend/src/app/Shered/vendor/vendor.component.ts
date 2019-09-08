@@ -23,10 +23,9 @@ export class VendorComponent implements OnInit {
   products: Product[];
   vendor: Vendor[]
 
-  async ngOnInit() {
-
-    await this.getIdInParams();
-    await this.getVendorById();
+  ngOnInit() {
+    this.getIdInParams();
+    this.getVendorById();
 
   }
 
