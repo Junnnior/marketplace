@@ -10,7 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { VendorComponent } from './Shered/vendor/vendor.component';
 import { ListProductsComponent } from './Shered/list-products/list-products.component';
 import { ProductsByIdComponent } from './Shered/products-by-id/products-by-id.component';
-import { LoginComponent } from './Shered/login/login.component'
+import { LoginComponent } from './Shered/login/login.component';
+import { DashComponent } from './admin/dash/dash.component'
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { LoginComponent } from './Shered/login/login.component'
     VendorComponent,
     ListProductsComponent,
     ProductsByIdComponent,
-    LoginComponent
+    LoginComponent,
+    DashComponent
   ],
   imports: [
     BrowserModule,
