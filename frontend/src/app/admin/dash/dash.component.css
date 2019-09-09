@@ -25,6 +25,10 @@ a:not([href]):not([tabindex]):focus {
     outline: 0;
 }
 
+a#pagesDropdown.nav-link.dropdown-toggle::after {
+    content: "▼" !important;
+}
+
 #wrapper {
     display: -webkit-box;
     display: -ms-flexbox;

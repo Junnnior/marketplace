@@ -11,7 +11,9 @@ import { VendorComponent } from './Shered/vendor/vendor.component';
 import { ListProductsComponent } from './Shered/list-products/list-products.component';
 import { ProductsByIdComponent } from './Shered/products-by-id/products-by-id.component';
 import { LoginComponent } from './Shered/login/login.component';
-import { DashComponent } from './admin/dash/dash.component'
+import { DashComponent } from './admin/dash/dash.component';
+import { AdminVendorsComponent } from './admin/dash/admin-vendors/admin-vendors.component';
+import { AdminProductsComponent } from './admin/dash/admin-products/admin-products.component'
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { DashComponent } from './admin/dash/dash.component'
     ListProductsComponent,
     ProductsByIdComponent,
     LoginComponent,
-    DashComponent
+    DashComponent,
+    AdminVendorsComponent,
+    AdminProductsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,20 @@ export class DashComponent implements OnInit {
 
   constructor() { }
 
+  showProdcts: boolean = false;
+  showVendors: boolean = true;
+  
   ngOnInit() {
   }
 
+  viewProdcts(){
+    this.showProdcts = true;
+    this.showVendors = false;
+
+  }
+
+  viewVendors(){
+    this.showProdcts = false;
+    this.showVendors = true;
+  }
 }

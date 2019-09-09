@@ -4,6 +4,7 @@ import { VendorComponent } from './Shered/vendor/vendor.component';
 import { IndexComponent } from './home/index/index.component'
 import { LoginComponent } from './Shered/login/login.component';
 import { DashComponent } from './admin/dash/dash.component';
+import { AdminVendorsComponent } from './admin/dash/admin-vendors/admin-vendors.component';
 
 const routes: Routes = [
   { path: 'vendor/:vendorId', component: VendorComponent },
