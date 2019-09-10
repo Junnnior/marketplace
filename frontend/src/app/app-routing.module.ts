@@ -6,13 +6,15 @@ import { LoginComponent } from './Shered/login/login.component';
 import { DashComponent } from './admin/dash/dash.component';
 import { AdminVendorsComponent } from './admin/dash/admin-vendors/admin-vendors.component';
 import { AdminStoresComponent } from './admin/admin-stores/admin-stores.component';
+import { ProductCreateComponent } from './admin/dash/product-create/product-create.component';
 
 const routes: Routes = [
   { path: 'vendor/:vendorId', component: VendorComponent },
   { path: '', component: IndexComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'myStores/:vendorId', component: AdminStoresComponent },
   { path: 'admin/:vendorId', component: DashComponent },
+  // { path: 'admin/product', component: ProductCreateComponent },
+  { path: 'myStores/:vendorId', component: AdminStoresComponent },
 ];
 
 @NgModule({
