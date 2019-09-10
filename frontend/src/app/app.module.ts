@@ -15,6 +15,7 @@ import { DashComponent } from './admin/dash/dash.component';
 import { AdminVendorsComponent } from './admin/dash/admin-vendors/admin-vendors.component';
 import { AdminProductsComponent } from './admin/dash/admin-products/admin-products.component'
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AdminProductsComponent } from './admin/dash/admin-products/admin-produc
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule, 
+    BrowserAnimationsModule
   
   ],
   providers: [HttpClientModule],
