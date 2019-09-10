@@ -29,7 +29,7 @@ export class ProductsByIdComponent implements OnInit {
       this.vendorId = params['vendorId'];
     });
   }
-  // get all products
+  // get product by id
   getPorductsById(id){
     this.prodService.getProdById(id)
       .then((resProd: Array<Product>) => {

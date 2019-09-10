@@ -10,6 +10,16 @@ const VendorSchema = new Schema({
         type: String
     },
 
+    user: {
+        name: { type: String },
+        email: { type: String }
+    },
+
+    shopping: {
+        name: { type: String },
+        shoppingId: { type: String }
+    },
+
     idsProducts: [],
 
     address: {
@@ -27,8 +37,8 @@ const VendorSchema = new Schema({
         cep: {
             type: String
         }
-
     },
+
 }, {
     timestamps: true,
 });

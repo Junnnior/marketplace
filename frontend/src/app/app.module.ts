@@ -16,6 +16,7 @@ import { AdminVendorsComponent } from './admin/dash/admin-vendors/admin-vendors.
 import { AdminProductsComponent } from './admin/dash/admin-products/admin-products.component'
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AdminStoresComponent } from './admin/admin-stores/admin-stores.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LoginComponent,
     DashComponent,
     AdminVendorsComponent,
-    AdminProductsComponent
+    AdminProductsComponent,
+    AdminStoresComponent
   ],
   imports: [
     BrowserModule,
