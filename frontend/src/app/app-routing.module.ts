@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: 'vendor/:vendorId', component: VendorComponent },
   { path: '', component: IndexComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'admin/:vendorId', component: DashComponent },
-  // { path: 'admin/product', component: ProductCreateComponent },
+  { path: 'admin', component: DashComponent },
+  { path: 'admin/product', component: ProductCreateComponent },
   { path: 'myStores/:vendorId', component: AdminStoresComponent },
 ];
 

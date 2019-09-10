@@ -19,6 +19,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AdminStoresComponent } from './admin/admin-stores/admin-stores.component';
 import { ProductCreateComponent } from './admin/dash/product-create/product-create.component';
 
+import { ImageCropperModule } from 'ngx-image-cropper';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +41,8 @@ import { ProductCreateComponent } from './admin/dash/product-create/product-crea
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule, 
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ImageCropperModule,
   
   ],
   providers: [HttpClientModule],

@@ -1,0 +1,25 @@
+.image-cropper {
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image-cropper label {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+image-cropper {
+    width: 400px;
+    height: 400px;
+}
+
+.form-create-product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#select-image {
+    display: none;
+}
